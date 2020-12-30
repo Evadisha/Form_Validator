@@ -4,6 +4,7 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
+
 // Show error message
 function showError(input, message) {
     const formControl = input.parentElement;
@@ -61,7 +62,9 @@ function checkLength(input, min, max) {
 
 // Check if password match
 function checkPasswordMatch(input1, input2) {
-    if (input1 !== input2)
+    if (input1.value == input2.value)
+        showSuccess(input2)
+    else
         showError(input2, `Both ${toTitleCase(input1.id)}s do not match.`);
 }
 
@@ -73,8 +76,6 @@ function toTitleCase(str) {
 // Add event listener
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-
-
 
     checkRequired([username, email, password, password2]);
     checkLength(username, 4, 15);

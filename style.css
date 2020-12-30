@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+body {
+    background-color: #dddddd;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #f5f4f4;
+    border-radius: 15px;
+    box-shadow: 10px 12px 10px rgb(156, 212, 235);
+    width: 400px;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: 'Redressed', cursive;
+    text-align: center;
+    padding: 0 0 20px;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 4px;
+    color: #222831;
+}
+
+.form-control input {
+    font-size: 14px;
+    display: block;
+    width: 90%;
+    border-radius: 5px;
+    border: 2px solid #746360;
+    padding: 10px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #ceb8b8;
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control small {
+    display: block;
+    color: var(--error-color);
+    left: 0px;
+    bottom: 0px;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form-button {
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 183, 255);
+    background-color: rgb(0, 183, 255);
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+    font-family: 'Redressed', cursive;
+}

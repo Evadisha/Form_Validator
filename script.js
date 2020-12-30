@@ -75,11 +75,12 @@ form.addEventListener('submit', function(e) {
     e.preventDefault();
 
 
-    checkEmail(email);
+
     checkRequired([username, email, password, password2]);
     checkLength(username, 4, 15);
     checkUsername(username);
     checkLength(password, 8, 25);
+    checkEmail(email);
     checkPasswordMatch(password, password2);
 
 });

@@ -5,6 +5,10 @@
     --error-color: #e74c3c;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #dddddd;
     font-family: 'Montserrat', sans-serif;
